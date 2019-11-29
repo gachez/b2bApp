@@ -81,7 +81,7 @@ let styles = StyleSheet.create({
       position: 'absolute',
       top: hp('68%'),
       left: wp('32%'),
-      backgroundColor: 'purple',
+      backgroundColor: 'rgba(95, 16, 150 ,0.99)',
       borderTopLeftRadius:5,
       borderBottomLeftRadius: 5,
       borderBottomRightRadius:5,
@@ -92,6 +92,28 @@ let styles = StyleSheet.create({
       textAlign: 'center',
       paddingTop: 10,
       color: 'yellow'
+    },
+    signup:{
+      position: 'absolute',
+      top: hp('87%'),
+      left: wp('12%'),
+      borderBottomWidth: 2
+    },
+    signupText:{
+      fontSize: 18,
+      fontWeight: "bold",
+      color: 'rgba(95, 16, 150 ,0.99)'
+    },
+    forgot: {
+      position: 'absolute',
+      top: hp('87%'),
+      left: wp('60%'),
+      borderBottomWidth: 2
+    },
+    forgotText:{
+      fontSize: 18,
+      fontWeight: "bold",
+      color: 'rgba(95, 16, 150 ,0.99)'
     }
 
 });
@@ -113,6 +135,14 @@ export default class HelloWorldApp extends Component {
           <TextInput placeholder="Password" style={styles.placeholderEmail}/>
         </View>
         <View style={styles.submit}><Text style={styles.submitText}>Sign in</Text></View>
+        <View style={styles.signup}>
+          <Text style={styles.signupText}>Sign up</Text>
+        </View>
+        
+        <View style={styles.forgot}>
+          <Text style={styles.forgotText}>Forgot Password?</Text>
+        </View>
+       
       </View>
        
       
