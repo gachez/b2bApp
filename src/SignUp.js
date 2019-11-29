@@ -30,9 +30,9 @@ let styles = StyleSheet.create({
     tagline:{
       position: 'absolute',
       top: hp('25%'),
-      left: wp('12.5%'),
+      left: wp('15%'),
       textAlign: 'center',
-      width: 300,
+      width: wp('70%'),
       fontSize: 18,
       color:'rgba(0,0,0,0.7)',
       fontStyle: 'italic',
@@ -124,21 +124,31 @@ let styles = StyleSheet.create({
     },
     signin: {
         position: 'absolute',
-        top: hp('87%'),
-        left: wp('10%')
+        top: hp('85%'),
+        left: wp('30%')
     },
     haveAccount: {
+        width: wp('50%'),
         fontSize: 16,
-        color: 'black'
+        color: 'rgba(0,0,0,0.7)',
+        fontWeight: 'bold'
+    },
+    login: {
+        fontSize: 18,
+        color: 'rgba(255, 195, 10 ,1)',
+        paddingLeft: 52.5,
+        fontWeight: 'bold'
     }
 
 });
 
 export default class SignUpScreen extends Component {
+
   static navigationOptions = {
     title: 'Sign Up'
   };
   render() {
+    const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
         
@@ -157,12 +167,12 @@ export default class SignUpScreen extends Component {
           <TextInput placeholder="Password" style={styles.placeholderEmail}/>
         </View>
         <View style={styles.submit}><Text style={styles.submitText}>Sign Up</Text></View>
-        <TouchableOpacity style={styles.signin}>
-          <View>
-            <Text style={styles.haveAccount}>Already have an account?</Text><Text>Sign in.</Text>   
+      
+          <View style={styles.signin}>
+            <Text style={styles.haveAccount}>Already have an account?</Text>
+            <Text onPress={() => navigate('SignIn')} style={styles.login}>Sign in.</Text>   
           </View>  
            
-        </TouchableOpacity>
        
       </View>
        

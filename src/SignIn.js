@@ -23,19 +23,19 @@ let styles = StyleSheet.create({
     },
     logo:{
       height: 200,
-      width: 250,
+      width: wp('65'),
       position: 'absolute',
       top: hp('1.5%'),
-      left: wp('20%')
+      left: wp('17.5%')
     },
     tagline:{
       position: 'absolute',
       top: hp('25%'),
-      left: wp('12.5%'),
+      left: wp('15%'),
       textAlign: 'center',
-      width: 300,
+      width: wp('70%'),
       fontSize: 18,
-      color:'black',
+      color:'rgba(0,0,0,0.7)',
       fontStyle: 'italic',
       zIndex: 3
     },
@@ -52,8 +52,8 @@ let styles = StyleSheet.create({
       borderBottomLeftRadius: 20,
       borderBottomRightRadius:20,
       borderTopRightRadius: 20,
-      borderColor: 'rgba(0,0,0,0.9)',
-      left: wp('12%'),
+      borderColor: 'rgba(0,0,0,0.5)',
+      left: wp('10%'),
       paddingLeft: 15
     },
     placeholderEmail:{
@@ -65,7 +65,7 @@ let styles = StyleSheet.create({
     placeholderViewPassword:{
       width: wp('80%'),
       position: 'absolute',
-      top: hp('55%'),
+      top: hp('52.5%'),
       borderLeftWidth: 2,
       borderTopLeftRadius:20,
       borderBottomLeftRadius: 20,
@@ -74,16 +74,16 @@ let styles = StyleSheet.create({
       borderRightWidth: 2,
       borderTopWidth: 2,
       borderBottomWidth: 2,
-      borderColor: 'rgba(0,0,0,0.9)',
-      left: wp('12%'),
+      borderColor: 'rgba(0,0,0,0.5)',
+      left: wp('10%'),
       paddingLeft: 15
     },
     submit: {
       width: wp('40%'),
       height: 50,
       position: 'absolute',
-      top: hp('68%'),
-      left: wp('32%'),
+      top: hp('65%'),
+      left: wp('30%'),
       backgroundColor: 'white',
       borderTopLeftRadius:5,
       borderBottomLeftRadius: 5,
@@ -92,35 +92,61 @@ let styles = StyleSheet.create({
       borderTopWidth: 2,
       borderBottomWidth:2,
       borderLeftWidth: 2,
-      borderRightWidth: 2
+      borderRightWidth: 2,
+      borderColor: 'rgba(0,0,0,0.6)'
     },
     submitText: {
       fontSize: 19.5,
       textAlign: 'center',
       paddingTop: 10,
-      color: 'black'
+      color: 'rgba(0,0,0,0.6)'
     },
-    signup:{
+    social: {
       position: 'absolute',
-      top: hp('87%'),
-      left: wp('12%'),
-      borderBottomWidth: 2
+      top: hp('74%'),
+      left: wp('30%')
     },
-    signupText:{
+    socialText: {
       fontSize: 18,
-      fontWeight: "bold",
-      color: 'rgba(95, 16, 150 ,0.99)'
+      color: 'rgba(0,0,0,0.7)',
+      fontWeight: 'bold'
     },
-    forgot: {
+    socialFB: {
       position: 'absolute',
-      top: hp('87%'),
-      left: wp('75%'),
-      borderBottomWidth: 2
+      top: hp('80%'),
+      left: wp('30%'),
+      width: 40,
+      height: 40
     },
-    forgotText:{
+    socialG: {
+      position: 'absolute',
+      top: hp('80%'),
+      left: wp('44.5%'),
+      width: 40,
+      height: 40      
+    },
+    socialLink: {
+      position: 'absolute',
+      top: hp('80%'),
+      left: wp('59.5%'),
+      width: 40,
+      height: 40
+    },
+    register: {
+      position: 'absolute',
+      top: hp('90%'),
+      left: wp('15%'),
+      flexDirection:'row'
+    },
+    registerText: {
       fontSize: 18,
-      fontWeight: "bold",
-      color: 'rgba(95, 16, 150 ,0.99)'
+      fontWeight: 'bold',
+      color: 'rgba(0,0,0,0.7)'
+    },
+    signup: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      color: 'rgba(255, 195, 0 ,0.9)'
     }
 
 });
@@ -145,17 +171,20 @@ export default class SignInScreen extends Component {
         <View style={styles.placeholderViewPassword}>
           <TextInput placeholder="Password" style={styles.placeholderEmail}/>
         </View>
-        <View style={styles.submit}><Text style={styles.submitText}>Sign in</Text></View>
-        <View style={styles.signup}>
-          <Text style={styles.signupText}>Forgot Password?</Text>
+        <View style={styles.submit}><Text onPress={() => navigate('UserInfo')} style={styles.submitText}>Sign in</Text></View>
+        <View style={styles.social}>
+          <Text style={styles.socialText}>Or sign in with social</Text>
         </View>
+
+        <Image source={require('../img/icons/linkedin.png')} style={styles.socialFB}/>
+        <Image source={require('../img/icons/google.png')} style={styles.socialG}/>
+        <Image source={require('../img/icons/facebook.png')} style={styles.socialLink}/>
+       <View style={styles.register}> 
+        <Text style={styles.registerText}>Don't have an account? </Text><Text onPress={
+            () => navigate('SignUp')
+        }style={styles.signup}>Sign Up.</Text>
+       </View>
         
-        <TouchableOpacity style={styles.forgot} onPress={() => navigate('SignUp')}> 
-        <View >
-          <Text style={styles.forgotText}>Sign Up</Text>
-        </View>
-        </TouchableOpacity>
-       
       </View>
        
       

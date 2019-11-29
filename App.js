@@ -2,6 +2,7 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import SignInScreen from './src/SignIn'
 import SignUpScreen from './src/SignUp'
+import UserInfo from './src/UserInfo'
 
 const MainNavigator = createStackNavigator({
   SignIn: {
@@ -15,6 +16,10 @@ const MainNavigator = createStackNavigator({
     navigationOptions: {
       header: null,
     }
+  },
+  UserInfo: {
+    screen: UserInfo,
+
   }
   
 });
