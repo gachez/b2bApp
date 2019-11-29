@@ -42,36 +42,37 @@ let styles = StyleSheet.create({
       width: wp('80%'),
       position: 'absolute',
       top: hp('40%'),
-      borderLeftWidth: 1,
-      borderRightWidth: 1,
-      borderTopWidth: 1,
-      borderBottomWidth: 1,
+      borderLeftWidth: 2,
+      borderRightWidth: 2,
+      borderTopWidth: 2,
+      borderBottomWidth: 2,
       borderTopLeftRadius:20,
       borderBottomLeftRadius: 20,
       borderBottomRightRadius:20,
       borderTopRightRadius: 20,
-      borderColor: 'rgba(0,0,0,0.4)',
+      borderColor: 'rgba(0,0,0,0.9)',
       left: wp('12%'),
       paddingLeft: 15
     },
     placeholderEmail:{
       height: 55,
       width: wp('80%'),
-      fontSize: 18
+      fontSize: 18,
+      color: 'black'
     },
     placeholderViewPassword:{
       width: wp('80%'),
       position: 'absolute',
       top: hp('55%'),
-      borderLeftWidth: 1,
+      borderLeftWidth: 2,
       borderTopLeftRadius:20,
       borderBottomLeftRadius: 20,
       borderBottomRightRadius:20,
       borderTopRightRadius: 20,
-      borderRightWidth: 1,
-      borderTopWidth: 1,
-      borderBottomWidth: 1,
-      borderColor: 'rgba(0,0,0,0.4)',
+      borderRightWidth: 2,
+      borderTopWidth: 2,
+      borderBottomWidth: 2,
+      borderColor: 'rgba(0,0,0,0.9)',
       left: wp('12%'),
       paddingLeft: 15
     },
@@ -81,17 +82,21 @@ let styles = StyleSheet.create({
       position: 'absolute',
       top: hp('68%'),
       left: wp('32%'),
-      backgroundColor: 'rgba(95, 16, 150 ,0.99)',
+      backgroundColor: 'white',
       borderTopLeftRadius:5,
       borderBottomLeftRadius: 5,
       borderBottomRightRadius:5,
-      borderTopRightRadius: 5
+      borderTopRightRadius: 5,
+      borderTopWidth: 2,
+      borderBottomWidth:2,
+      borderLeftWidth: 2,
+      borderRightWidth: 2
     },
     submitText: {
       fontSize: 19.5,
       textAlign: 'center',
       paddingTop: 10,
-      color: 'yellow'
+      color: 'black'
     },
     signup:{
       position: 'absolute',
@@ -107,7 +112,7 @@ let styles = StyleSheet.create({
     forgot: {
       position: 'absolute',
       top: hp('87%'),
-      left: wp('60%'),
+      left: wp('55%'),
       borderBottomWidth: 2
     },
     forgotText:{
