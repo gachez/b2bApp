@@ -22,17 +22,87 @@ let styles = StyleSheet.create({
       infoTextView:{
           position: 'absolute',
           top: hp('5%'),
-          left: wp('5%'),
+          left: wp('3.5%'),
           width: wp('95%')
       }
       ,
       infoText: {
           fontSize: 20,
-          color: 'rgba(0,0,0,0.8)'
+          color: 'rgba(0,0,0,0.6)',
+          fontWeight: 'normal'
+      },
+      company: {
+          height: 60,
+          paddingLeft: 5,
+          position: 'absolute',
+          top: hp('30%'),
+          left: wp('2.5%'),
+          width: wp('95%'),
+          borderTopWidth: 2,
+          borderBottomWidth:2,
+          borderLeftWidth: 2,
+          borderRightWidth: 2,
+          borderTopLeftRadius:5,
+          borderBottomLeftRadius: 5,
+          borderBottomRightRadius:5,
+          borderTopRightRadius: 5,
+          borderColor: 'rgba(0,0,0,0.7)'
+      },
+      companyText: {
+          fontSize: 20,
+          color: 'rgba(0,0,0,0.7)'
+      },
+
+      position: {
+          height: 60,
+          paddingLeft: 5,
+          position: 'absolute',
+          top: hp('45%'),
+          left: wp('2.5%'),
+          width: wp('95%'),
+          borderTopWidth: 2,
+          borderBottomWidth:2,
+          borderLeftWidth: 2,
+          borderRightWidth: 2,
+          borderTopLeftRadius:5,
+          borderBottomLeftRadius: 5,
+          borderBottomRightRadius:5,
+          borderTopRightRadius: 5,
+          borderColor: 'rgba(0,0,0,0.5)'
+      },
+      PositionText: {
+          fontSize: 20,
+          color: 'rgba(0,0,0,0.5)'
+      },
+      nextView: {
+          position: 'absolute',
+          top: hp('60%'),
+          left: wp('70%'),
+          borderTopWidth: 2,
+          borderBottomWidth:2,
+          borderLeftWidth: 2,
+          borderRightWidth: 2,
+          borderTopLeftRadius:5,
+          borderBottomLeftRadius: 5,
+          borderBottomRightRadius:5,
+          borderTopRightRadius: 5,
+          width: 100,
+          height: 50,
+          paddingLeft: 18,
+          paddingTop:5,
+          borderColor: 'rgba(0,0,0,0.5)'
+      },
+      nextText: {
+          fontSize: 24,
+          fontWeight: "normal",
+          color: 'rgba(0,0,0,0.5)'
       }
+
 })
 export default class UserInfo extends Component{
+ 
     render(){
+        const {navigate} = this.props.navigation;
         return(
             <View style={styles.container}>
                 <Image source={require('../img/business-meeting.jpg')} style={styles.backgroundImage}/>
@@ -42,7 +112,20 @@ export default class UserInfo extends Component{
                       please fill in the details below
                   </Text>
                 </View>
+                <View style={styles.company}>
+                  <TextInput placeholder="Company" style={styles.companyText}></TextInput>
+                </View>
 
+                <View style={styles.position}>
+                  <TextInput placeholder="Position" style={styles.PositionText}></TextInput>
+                </View>
+
+                <View style={styles.nextView}>
+                    <Text style={styles.nextText}  onPress={
+            () => navigate('SelectInterest')
+        }>Next </Text>
+                </View>
+                
             </View>
         )
     }

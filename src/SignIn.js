@@ -28,22 +28,12 @@ let styles = StyleSheet.create({
       top: hp('1.5%'),
       left: wp('17.5%')
     },
-    tagline:{
-      position: 'absolute',
-      top: hp('25%'),
-      left: wp('15%'),
-      textAlign: 'center',
-      width: wp('70%'),
-      fontSize: 18,
-      color:'rgba(0,0,0,0.7)',
-      fontStyle: 'italic',
-      zIndex: 3
-    },
+  
     placeholderViewEmail:{
 
       width: wp('80%'),
       position: 'absolute',
-      top: hp('40%'),
+      top: hp('32%'),
       borderLeftWidth: 2,
       borderRightWidth: 2,
       borderTopWidth: 2,
@@ -65,7 +55,7 @@ let styles = StyleSheet.create({
     placeholderViewPassword:{
       width: wp('80%'),
       position: 'absolute',
-      top: hp('52.5%'),
+      top: hp('45.5%'),
       borderLeftWidth: 2,
       borderTopLeftRadius:20,
       borderBottomLeftRadius: 20,
@@ -82,7 +72,7 @@ let styles = StyleSheet.create({
       width: wp('40%'),
       height: 50,
       position: 'absolute',
-      top: hp('65%'),
+      top: hp('59%'),
       left: wp('30%'),
       backgroundColor: 'white',
       borderTopLeftRadius:5,
@@ -103,7 +93,7 @@ let styles = StyleSheet.create({
     },
     social: {
       position: 'absolute',
-      top: hp('74%'),
+      top: hp('71%'),
       left: wp('30%')
     },
     socialText: {
@@ -113,21 +103,21 @@ let styles = StyleSheet.create({
     },
     socialFB: {
       position: 'absolute',
-      top: hp('80%'),
+      top: hp('78%'),
       left: wp('30%'),
       width: 40,
       height: 40
     },
     socialG: {
       position: 'absolute',
-      top: hp('80%'),
+      top: hp('78%'),
       left: wp('44.5%'),
       width: 40,
       height: 40      
     },
     socialLink: {
       position: 'absolute',
-      top: hp('80%'),
+      top: hp('78%'),
       left: wp('59.5%'),
       width: 40,
       height: 40
@@ -164,8 +154,7 @@ export default class SignInScreen extends Component {
         <View style={styles.overlay}></View>
         {/* logo image */}
         <Image source={require('../img/b2b-trans.png')} style={styles.logo}/>
-        <Text style={styles.tagline}>Your gateway to investment opportunities across the African continent</Text>
-        <View style={styles.placeholderViewEmail}>
+              <View style={styles.placeholderViewEmail}>
           <TextInput placeholder="Email address" style={styles.placeholderEmail}/>
         </View>
         <View style={styles.placeholderViewPassword}>
@@ -182,7 +171,8 @@ export default class SignInScreen extends Component {
        <View style={styles.register}> 
         <Text style={styles.registerText}>Don't have an account? </Text><Text onPress={
             () => navigate('SignUp')
-        }style={styles.signup}>Sign Up.</Text>
+        }
+        style={styles.signup}>Sign Up.</Text>
        </View>
         
       </View>

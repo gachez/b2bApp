@@ -27,21 +27,10 @@ let styles = StyleSheet.create({
       top: hp('1.5%'),
       left: wp('20%')
     },
-    tagline:{
-      position: 'absolute',
-      top: hp('25%'),
-      left: wp('15%'),
-      textAlign: 'center',
-      width: wp('70%'),
-      fontSize: 18,
-      color:'rgba(0,0,0,0.7)',
-      fontStyle: 'italic',
-      zIndex: 3
-    },
     placeholderViewFullName:{
         width: wp('80%'),
         position: 'absolute',
-        top: hp('38%'),
+        top: hp('30%'),
         borderLeftWidth: 2,
         borderRightWidth: 2,
         borderTopWidth: 2,
@@ -64,7 +53,7 @@ let styles = StyleSheet.create({
 
       width: wp('80%'),
       position: 'absolute',
-      top: hp('50%'),
+      top: hp('43.5%'),
       borderLeftWidth: 2,
       borderRightWidth: 2,
       borderTopWidth: 2,
@@ -86,7 +75,7 @@ let styles = StyleSheet.create({
     placeholderViewPassword:{
       width: wp('80%'),
       position: 'absolute',
-      top: hp('62%'),
+      top: hp('57%'),
       borderLeftWidth: 2,
       borderTopLeftRadius:20,
       borderBottomLeftRadius: 20,
@@ -103,7 +92,7 @@ let styles = StyleSheet.create({
       width: wp('40%'),
       height: 50,
       position: 'absolute',
-      top: hp('75%'),
+      top: hp('70%'),
       left: wp('30%'),
       backgroundColor: 'white',
       borderTopLeftRadius:5,
@@ -127,18 +116,54 @@ let styles = StyleSheet.create({
         top: hp('85%'),
         left: wp('30%')
     },
-    haveAccount: {
-        width: wp('50%'),
-        fontSize: 16,
-        color: 'rgba(0,0,0,0.7)',
-        fontWeight: 'bold'
+    social: {
+      position: 'absolute',
+      top: hp('78%'),
+      left: wp('30%')
     },
-    login: {
-        fontSize: 18,
-        color: 'rgba(255, 195, 10 ,1)',
-        paddingLeft: 52.5,
-        fontWeight: 'bold'
+    socialText: {
+      fontSize: 18,
+      color: 'rgba(0,0,0,0.7)',
+      fontWeight: 'bold'
+    },
+    socialFB: {
+      position: 'absolute',
+      top: hp('83.5%'),
+      left: wp('30%'),
+      width: 40,
+      height: 40
+    },
+    socialG: {
+      position: 'absolute',
+      top: hp('83.5%'),
+      left: wp('44.5%'),
+      width: 40,
+      height: 40      
+    },
+    socialLink: {
+      position: 'absolute',
+      top: hp('83.5%'),
+      left: wp('59.5%'),
+      width: 40,
+      height: 40
+    },
+    register: {
+      position: 'absolute',
+      top: hp('91%'),
+      left: wp('15%'),
+      flexDirection:'row'
+    },
+    registerText: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      color: 'rgba(0,0,0,0.7)'
+    },
+    signup: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      color: 'rgba(255, 195, 0 ,0.9)'
     }
+
 
 });
 
@@ -156,7 +181,6 @@ export default class SignUpScreen extends Component {
         <View style={styles.overlay}></View>
         {/* logo image */}
         <Image source={require('../img/b2b-trans.png')} style={styles.logo}/>
-        <Text style={styles.tagline}>Your gateway to investment opportunities across the African continent</Text>
         <View style={styles.placeholderViewFullName}>
           <TextInput placeholder="Full name" style={styles.placeholderFullName}/>
         </View>
@@ -168,10 +192,19 @@ export default class SignUpScreen extends Component {
         </View>
         <View style={styles.submit}><Text style={styles.submitText}>Sign Up</Text></View>
       
-          <View style={styles.signin}>
-            <Text style={styles.haveAccount}>Already have an account?</Text>
-            <Text onPress={() => navigate('SignIn')} style={styles.login}>Sign in.</Text>   
-          </View>  
+        <View style={styles.social}>
+          <Text style={styles.socialText}>Or sign up with social</Text>
+        </View>
+
+        <Image source={require('../img/icons/linkedin.png')} style={styles.socialFB}/>
+        <Image source={require('../img/icons/google.png')} style={styles.socialG}/>
+        <Image source={require('../img/icons/facebook.png')} style={styles.socialLink}/>
+       <View style={styles.register}> 
+        <Text style={styles.registerText}>Already have an account? </Text><Text onPress={
+            () => navigate('SignIn')
+        }
+        style={styles.signup}>Sign In.</Text>
+       </View>
            
        
       </View>

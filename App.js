@@ -3,8 +3,11 @@ import {createStackNavigator} from 'react-navigation-stack';
 import SignInScreen from './src/SignIn'
 import SignUpScreen from './src/SignUp'
 import UserInfo from './src/UserInfo'
+import SelectInterest from './src/SelectInterest'
+import EventsScreen from './src/EventsScreen';
 
 const MainNavigator = createStackNavigator({
+
   SignIn: {
     screen: SignInScreen,
     navigationOptions: {
@@ -20,6 +23,13 @@ const MainNavigator = createStackNavigator({
   UserInfo: {
     screen: UserInfo,
 
+  },
+  SelectInterest: {
+    screen: SelectInterest,
+
+  },
+  EventsScreen: {
+    screen: EventsScreen
   }
   
 });
