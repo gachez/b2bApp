@@ -5,6 +5,8 @@ import SignUpScreen from './src/SignUp'
 import UserInfo from './src/UserInfo'
 import SelectInterest from './src/SelectInterest'
 import EventsScreen from './src/EventsScreen';
+import EventScreen from './src/EventScreen'
+
 
 const MainNavigator = createStackNavigator({
 
@@ -33,6 +35,9 @@ const MainNavigator = createStackNavigator({
     navigationOptions: {
       header: null,
     }
+  },
+  EventScreen: {
+    screen: EventScreen
   }
   
 });

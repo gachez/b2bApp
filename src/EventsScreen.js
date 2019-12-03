@@ -22,6 +22,7 @@ export default class EventsScreen extends Component{
     }
 
     render(){
+        const {navigate} = this.props.navigation;
         return(
             <View style={styles.container}>
             <Menu />
@@ -65,7 +66,7 @@ export default class EventsScreen extends Component{
             <ScrollView style={{ top: hp('15%'), width: wp('100%')}}>
                 {/* the first event card */}
                 <TouchableOpacity 
-                onPress={()=>{console.log('event clicked')}}
+                onPress={()=>{navigate('EventScreen')}}
                 style={{
                             width: wp('95%'),
                             height: 200,
@@ -112,7 +113,7 @@ export default class EventsScreen extends Component{
              {/* end of first card */}
             
             {/* second card */}
-             <View  style={{
+             <TouchableOpacity  style={{
                             top: 15,
                             width: wp('95%'),
                             height: 200,
@@ -155,9 +156,9 @@ export default class EventsScreen extends Component{
                            <Image style={{width: 38, height: 38, left: 10}} source={require('../img/icons/calendar.png')}/>
                            <Text style={{fontSize: 20.5, color: 'rgba(0,0,0,0.5)', left: '35%'}}>28 Jan 6am - 6pm</Text>
                       </View>
-                </View>
+                </TouchableOpacity>
                 {/* third card */}
-                <View  style={{
+                <TouchableOpacity  style={{
                             top: 30,
                             width: wp('95%'),
                             height: 200,
@@ -200,7 +201,7 @@ export default class EventsScreen extends Component{
                            <Image style={{width: 38, height: 38, left: 10}} source={require('../img/icons/calendar.png')}/>
                            <Text style={{fontSize: 20.5, color: 'rgba(0,0,0,0.5)', left: '35%'}}>28 Jan 6am - 6pm</Text>
                       </View>
-                </View> 
+                </TouchableOpacity> 
 
                 <View style={{height:200}} />
             </ScrollView>
