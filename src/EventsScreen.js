@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { ScrollView, Text, View, Image, StyleSheet, TextInput, Button, TouchableOpacity } from 'react-native';
+import { ScrollView, Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import { NavigationEvents } from 'react-navigation';
-
+import Menu from './components/Menu'
 
 
 let styles = StyleSheet.create({
@@ -24,23 +24,17 @@ export default class EventsScreen extends Component{
     render(){
         return(
             <View style={styles.container}>
-             <View style={{
-                 width: wp('100%'),
-                 height: 50
-             }}>
-                <Image source={require('../img/icons/menu.png')} style={{top: 15,width: 45, height: 35, left: wp('85%'), resizeMode: 'contain'}}/> 
-              </View>   
-            
+            <Menu />
             {/* options at the top either upcoming or ongoing events */}
-            <View style={{flexDirection: 'row', position: 'absolute', top: hp('10.5%'), width: wp('100%')}}>
+            <View style={{flexDirection: 'row', position: 'absolute', top: hp('11.5%'), width: wp('100%')}}>
             <TouchableOpacity style={{
                             width: wp('40%'),
                             height: 59,
                             left: wp('7.5%'),
-                            borderTopWidth: 1,
-                            borderBottomWidth:1,
-                            borderLeftWidth: 1,
-                            borderRightWidth:1,
+                            borderTopWidth: 2,
+                            borderBottomWidth:2,
+                            borderLeftWidth: 2,
+                            borderRightWidth:2,
 
                             borderTopLeftRadius:25,
                             borderBottomLeftRadius: 25,
@@ -70,7 +64,9 @@ export default class EventsScreen extends Component{
             {/* events scroll view */}
             <ScrollView style={{ top: hp('15%'), width: wp('100%')}}>
                 {/* the first event card */}
-                <View  style={{
+                <TouchableOpacity 
+                onPress={()=>{console.log('event clicked')}}
+                style={{
                             width: wp('95%'),
                             height: 200,
                             left: wp('2.5%'),
@@ -112,7 +108,7 @@ export default class EventsScreen extends Component{
                            <Image style={{width: 38, height: 38, left: 10}} source={require('../img/icons/calendar.png')}/>
                            <Text style={{fontSize: 20.5, color: 'rgba(0,0,0,0.5)', left: '35%'}}>28 Jan 6am - 6pm</Text>
                       </View>
-                </View>
+                </TouchableOpacity>
              {/* end of first card */}
             
             {/* second card */}
