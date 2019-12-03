@@ -29,7 +29,10 @@ const MainNavigator = createStackNavigator({
 
   },
   EventsScreen: {
-    screen: EventsScreen
+    screen: EventsScreen,
+    navigationOptions: {
+      header: null,
+    }
   }
   
 });
