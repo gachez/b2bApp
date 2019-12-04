@@ -18,14 +18,80 @@ let styles = StyleSheet.create({
 export default class EventsScreen extends Component{
 
     state = {
+        display: 'none',
+        imageSource: '../../img/icons/menu.png'
+    }
 
+    // the toggle hamburger function
+    toggleMenu = () =>{
+        this.state.display === 'none' ? this.setState({display: 'flex'}) : this.setState({display: 'none'})
+        console.log('toggler')
     }
 
     render(){
         const {navigate} = this.props.navigation;
         return(
             <View style={styles.container}>
-            <Menu />
+            <Menu hamburgerIcon = {this.state.imageSource} toggler = {this.toggleMenu}/>
+            {/* hamburger menu */}
+            <View style={{
+                display: this.state.display,
+                width: wp('100%'),
+                height: hp('100%'),
+                backgroundColor: 'rgba(255,255,255,0.9)',
+                zIndex: 999,
+                justifyContent: 'center',
+                alignItems: 'center'
+
+            }}>
+                <View style={{height: '80%'}}>
+
+                <View style={{width: wp('100%'), flexDirection: 'row', top: 20}}>
+
+                <Image style={{
+                    width: 32,
+                    height: 32,
+                    left: wp('5%'),
+                    top: 5
+                }} source={require('../img/icons/user.png')}/>    
+                <Text style={{fontSize: 25, left: wp('15%'), fontWeight: 'normal'}}>Profile</Text>
+
+                    </View>    
+           
+              <View style={{
+                  width: wp('100%'),
+                  flexDirection: 'row',
+                  top: 45
+              }}>
+              <Image style={{
+                    width: 32,
+                    height: 32,
+                    left: wp('5%')
+                }} source={require('../img/icons/placeholder.png')}/>    
+               <Text style={{fontSize: 25, left: wp('15%')}}>My Events</Text>
+              </View>
+                
+              <View style={{width: wp('100%'), flexDirection: 'row', top: 75}}>
+              <Image style={{
+                    width: 32,
+                    height: 32,
+                    left: wp('5%')
+                }} source={require('../img/icons/list.png')}/>      
+              <Text style={{fontSize: 25, left: wp('15%'), top: -7}}>Categories</Text>
+              </View>
+
+              <View style={{width: wp('100%'), flexDirection: 'row', top: 95}}>
+              <Image style={{
+                    width: 32,
+                    height: 32,
+                    left: wp('5%')
+                }} source={require('../img/icons/settings.png')}/>      
+              <Text style={{fontSize: 25, left: wp('15%'), top: -7}}>Settings</Text>
+              </View>
+                
+                </View>
+                
+            </View>
             {/* options at the top either upcoming or ongoing events */}
             <View style={{flexDirection: 'row', position: 'absolute', top: hp('11.5%'), width: wp('100%')}}>
             <TouchableOpacity style={{
