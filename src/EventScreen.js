@@ -12,7 +12,7 @@ let styles = StyleSheet.create({
       },
       eventDP: {
           width: wp('100%'),
-          height: hp('40%')
+          height: hp('35%')
       },
       title: {
           top: 15,
@@ -21,27 +21,30 @@ let styles = StyleSheet.create({
           fontWeight: 'bold'
       },
       eventVenue: {
-          left:15,
-          top: 18,
-          fontSize: 20,
+          left:45,
+          top: 25,
+          fontSize: 18,
           fontWeight: "bold",
           color: 'rgba(0,0,0,0.7)'
       },
       eventDescription: {
           left: 10,
-          top: 25,
+          top: 35,
           fontSize: 16,
           width: wp('85%'),
           textAlign: 'justify'
       },
       attendBtn: {
           position: 'absolute',
-          top:hp('75%'),
+          top:hp('80%'),
           left: 10,
           width: wp('65%'),
           height: 70,
-          borderLeftWidth: 2,
-   
+          borderBottomLeftRadius: 5,
+          borderTopLeftRadius: 5,
+          borderBottomLeftRadius: 5,
+          borderTopRightRadius: 5,
+          borderLeftWidth: 2,  
           borderTopWidth: 2,
           borderBottomWidth: 2,
           borderColor: 'rgba(255, 195, 0, 0.8)',
@@ -52,9 +55,9 @@ let styles = StyleSheet.create({
           textAlign: 'center',
           fontSize: 26,
           fontWeight: 'bold',
-          top: 10,
+          top: 12,
           left: 25,
-          color: 'rgba(0,0,0,0.8)'
+          color: 'rgba(0,0,0,1)'
       }
 })
 export default class EventsScreen extends Component{
@@ -62,41 +65,87 @@ export default class EventsScreen extends Component{
     render(){
         return(
             <View style={styles.container}>
-              <View style={styles.eventDP}>
+              <ScrollView>
+
+                 <View style={styles.eventDP}>
               <Image  style={{flex: 1,width: undefined, height: undefined}}source={require('../img/event.jpeg')}/>
               </View>
 
-              <View>
+
+            {/* scroll view starts here */}
+        
+                
+            <View>
                   <Text style={styles.title}>Special Agribusiness event</Text>
+                  <Image style={{
+                      width: 22,
+                       height: 22, 
+                       position: 'absolute',
+                       top: 58,
+                       left: 10
+                       }} source={require('../img/icons/maps-and-flags.png')}/>
                   <Text style={styles.eventVenue}>KICC, Ground Floor - Nairobi, Kenya</Text>
                   <Text style={styles.eventDescription}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rutrum tempus lorem ut congue.
                     Suspendisse potenti. Ut finibus, lacus quis pretium euismod, lorem dolor viverra nunc, in volutpat sem justo vitae eros. 
                     Etiam tempor laoreet odio id vehicula. Nam luctus risus et ipsum elementum, 
                     eget finibus urna laoreet..</Text></View>
+          
+
+            
+                <Text style={{
+                    position: 'absolute',
+                    top: hp('71%'),
+                    left: wp('5%'),
+                    fontSize: 25,
+                    fontWeight: 'bold',
+                    color: 'rgba(0,0,0,0.7)',
+                    borderTopWidth: 2,
+                    borderBottomWidth: 2,
+                    borderRightWidth: 2,
+                    borderLeftWidth:2,
+                    padding: 5
+                }}>312</Text>
+                <Text style={{
+                    position: 'absolute',
+                    top: hp('72.5%'),
+                    left: wp('22%'),
+                    fontSize: 25,
+                    fontWeight: 'bold',
+                    color: 'rgba(0,0,0,0.7)'
+                }}>Attending</Text> 
+   
             <TouchableOpacity style={styles.attendBtn}>
                 <Text style={styles.attendText}>Want to attend?</Text>
             
             </TouchableOpacity>
 
             <TouchableOpacity style={{width: 70, height: 70, position: 'absolute',
-                    top: hp('75%'),
+                    top: hp('80%'),
                     left: wp('67%'),
-                    borderRightWidth: 2,
-                    borderLeftWidth: 2,
-                    borderTopWidth: 2,
-                    borderBottomWidth: 2,
+                    borderRightWidth: 3,
+                    borderLeftWidth: 3,
+                    borderTopWidth: 3,
+                    borderBottomWidth: 3,
+                    borderBottomLeftRadius: 5,
+                    borderTopLeftRadius: 5,
+                    borderBottomLeftRadius: 5,
+                    borderTopRightRadius: 5,
                     borderColor: 'rgba(255, 195, 0, 0.8)'
         }}> 
                 <Image style={{
-                    top: 5,
-                    left: 5,
-                    width: 50,
-                    height: 50
+                    top: 15,
+                    left: 15,
+                    width: 35,
+                    height: 35
                 }} source={require('../img/icons/tick.png')}/>
-            </TouchableOpacity>
-
+            </TouchableOpacity>   
+            <View style={{height: 200}}></View>  
+              </ScrollView>  
+            
             </View>
+             
+
         )
     }
 }
