@@ -99,7 +99,7 @@ export default class WelcomeScreen extends Component{
                 </TouchableOpacity>
 
 
-                <TouchableOpacity style={styles.signUpBtn}>
+                <TouchableOpacity onPress={ () => navigate('SignUp')} style={styles.signUpBtn}>
                     <Text style={styles.signInText}>Sign Up</Text>
                 </TouchableOpacity>
 

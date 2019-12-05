@@ -107,14 +107,14 @@ export default class EventsScreen extends Component{
                             borderBottomLeftRadius: 25,
                             borderBottomRightRadius:25,
                             borderTopRightRadius: 25,
-                            borderColor: 'rgba(0,0,0,0.5)'                 
+                            borderColor: 'rgba(0,0,0,0.2)'                 
             }}><Text style={{fontSize: 25, color: 'rgba(0, 0, 0,0.7)',fontWeight: 'bold', paddingTop: 10, paddingLeft: 25}}>Upcoming</Text>
             </TouchableOpacity>
             <TouchableOpacity style={{
                             width: wp('40%'),
                             height: 59,
                             left: wp('11.5%'),
-                            borderColor: 'rgba(0,0,0,0.2)',
+                            borderColor: 'rgba(0,0,0,0.1)',
                             borderTopWidth: 1,
                             borderBottomWidth:1,
                             borderLeftWidth: 1,

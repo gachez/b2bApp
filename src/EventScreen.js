@@ -37,7 +37,7 @@ let styles = StyleSheet.create({
       },
       attendBtn: {
           position: 'absolute',
-          top:hp('80%'),
+          top:hp('85%'),
           left: 10,
           width: wp('65%'),
           height: 70,
@@ -97,9 +97,9 @@ export default class EventsScreen extends Component{
             
                 <Text style={{
                     position: 'absolute',
-                    top: hp('71%'),
+                    top: hp('70%'),
                     left: 0,
-                    fontSize: 28,
+                    fontSize: 25,
                     fontWeight: 'bold',
                     color: 'rgba(255, 195, 0, 1)',
                     borderColor:'rgba(0,0,0,0.5)' ,
@@ -110,22 +110,29 @@ export default class EventsScreen extends Component{
                 }}>312</Text>
                 <Text style={{
                     position: 'absolute',
-                    top: hp('71.75%'),
+                    top: hp('70.75%'),
                     left: wp('18%'),
-                    fontSize: 28,
+                    fontSize: 25,
                     fontWeight: 'bold',
                     color: 'rgba(255, 195, 0, 1)',
               
                     paddingBottom: 8
-                }}>Attending</Text> 
+                }}>Attending</Text>
+                <Text style={{
+                    position: 'absolute',
+                    top: hp('78%'),
+                    left: 10,
+                    fontSize: 23,
+                    fontWeight: 'bold'
+                }}> See companies attending >></Text> 
    
             <TouchableOpacity style={styles.attendBtn}>
-                <Text style={styles.attendText}>Want to attend?</Text>
+                <Text style={styles.attendText}>I want to attend</Text>
             
             </TouchableOpacity>
 
             <TouchableOpacity style={{width: 70, height: 70, position: 'absolute',
-                    top: hp('80%'),
+                    top: hp('85%'),
                     left: wp('67%'),
                     borderRightWidth: 3,
                     borderLeftWidth: 3,
@@ -144,7 +151,7 @@ export default class EventsScreen extends Component{
                     height: 35
                 }} source={require('../img/icons/tick.png')}/>
             </TouchableOpacity>   
-            <View style={{height: 200}}></View>  
+            <View style={{height: 250}}></View>  
               </ScrollView>  
             
             </View>
