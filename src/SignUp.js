@@ -39,7 +39,7 @@ let styles = StyleSheet.create({
         borderBottomLeftRadius: 20,
         borderBottomRightRadius:20,
         borderTopRightRadius: 20,
-        borderColor: 'rgba(0,0,0,0.5)',
+        borderColor: 'rgba(0,0,0,0.4)',
         left: wp('10%'),
         paddingLeft: 15
     },
@@ -62,7 +62,7 @@ let styles = StyleSheet.create({
       borderBottomLeftRadius: 20,
       borderBottomRightRadius:20,
       borderTopRightRadius: 20,
-      borderColor: 'rgba(0,0,0,0.5)',
+      borderColor: 'rgba(0,0,0,0.4)',
       left: wp('10%'),
       paddingLeft: 15
     },
@@ -84,7 +84,7 @@ let styles = StyleSheet.create({
       borderRightWidth: 2,
       borderTopWidth: 2,
       borderBottomWidth: 2,
-      borderColor: 'rgba(0,0,0,0.5)',
+      borderColor: 'rgba(0,0,0,0.4)',
       left: wp('10%'),
       paddingLeft: 15
     },
@@ -92,18 +92,18 @@ let styles = StyleSheet.create({
       width: wp('40%'),
       height: 50,
       position: 'absolute',
-      top: hp('70%'),
+      top: hp('68%'),
       left: wp('30%'),
       backgroundColor: 'white',
-      borderTopLeftRadius:5,
-      borderBottomLeftRadius: 5,
-      borderBottomRightRadius:5,
-      borderTopRightRadius: 5,
+      borderTopLeftRadius:20,
+      borderBottomLeftRadius: 20,
+      borderBottomRightRadius:20,
+      borderTopRightRadius: 20,
       borderTopWidth: 2,
       borderBottomWidth:2,
       borderLeftWidth: 2,
       borderRightWidth: 2,
-      borderColor: 'rgba(0,0,0,0.6)'
+      borderColor: 'rgba(0,0,0,0.4)'
     },
     submitText: {
       fontSize: 19.5,
@@ -118,7 +118,7 @@ let styles = StyleSheet.create({
     },
     social: {
       position: 'absolute',
-      top: hp('78%'),
+      top: hp('77.5%'),
       left: wp('30%')
     },
     socialText: {

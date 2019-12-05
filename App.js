@@ -6,9 +6,18 @@ import UserInfo from './src/UserInfo'
 import SelectInterest from './src/SelectInterest'
 import EventsScreen from './src/EventsScreen';
 import EventScreen from './src/EventScreen'
+import Welcome from './src/Welcome'
 
 
 const MainNavigator = createStackNavigator({
+
+
+  Welcome: {
+    screen: Welcome,
+    navigationOptions: {
+      header: null
+    }
+  },
 
   SignIn: {
     screen: SignInScreen,

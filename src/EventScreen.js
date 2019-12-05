@@ -18,7 +18,8 @@ let styles = StyleSheet.create({
           top: 15,
           left: 10,
           fontSize: 25,
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          color: 'rgba(255, 195, 10, 1)'
       },
       eventVenue: {
           left:45,
@@ -40,13 +41,14 @@ let styles = StyleSheet.create({
           left: 10,
           width: wp('65%'),
           height: 70,
-          borderBottomLeftRadius: 5,
-          borderTopLeftRadius: 5,
-          borderBottomLeftRadius: 5,
+          borderBottomLeftRadius: 20,
+          borderTopLeftRadius: 20,
+          borderBottomLeftRadius: 20,
           borderTopRightRadius: 5,
           borderLeftWidth: 2,  
           borderTopWidth: 2,
           borderBottomWidth: 2,
+          backgroundColor: 'rgba(255,195,0,0.8)',
           borderColor: 'rgba(255, 195, 0, 0.8)',
           flexDirection: 'row'
       },
@@ -96,23 +98,25 @@ export default class EventsScreen extends Component{
                 <Text style={{
                     position: 'absolute',
                     top: hp('71%'),
-                    left: wp('5%'),
-                    fontSize: 25,
+                    left: 0,
+                    fontSize: 28,
                     fontWeight: 'bold',
-                    color: 'rgba(0,0,0,0.7)',
-                    borderTopWidth: 2,
-                    borderBottomWidth: 2,
-                    borderRightWidth: 2,
-                    borderLeftWidth:2,
-                    padding: 5
+                    color: 'rgba(255, 195, 0, 1)',
+                    borderColor:'rgba(0,0,0,0.5)' ,
+             
+                    padding: 5,
+                    paddingLeft: 15,
+                    paddingRight: 15
                 }}>312</Text>
                 <Text style={{
                     position: 'absolute',
-                    top: hp('72.5%'),
-                    left: wp('22%'),
-                    fontSize: 25,
+                    top: hp('71.75%'),
+                    left: wp('18%'),
+                    fontSize: 28,
                     fontWeight: 'bold',
-                    color: 'rgba(0,0,0,0.7)'
+                    color: 'rgba(255, 195, 0, 1)',
+              
+                    paddingBottom: 8
                 }}>Attending</Text> 
    
             <TouchableOpacity style={styles.attendBtn}>
@@ -127,10 +131,10 @@ export default class EventsScreen extends Component{
                     borderLeftWidth: 3,
                     borderTopWidth: 3,
                     borderBottomWidth: 3,
-                    borderBottomLeftRadius: 5,
+                    borderBottomRightRadius: 20,
                     borderTopLeftRadius: 5,
                     borderBottomLeftRadius: 5,
-                    borderTopRightRadius: 5,
+                    borderTopRightRadius: 20,
                     borderColor: 'rgba(255, 195, 0, 0.8)'
         }}> 
                 <Image style={{

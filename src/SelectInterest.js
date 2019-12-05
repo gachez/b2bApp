@@ -43,10 +43,10 @@ let styles = StyleSheet.create({
         borderBottomWidth:1,
         borderLeftWidth: 1,
         borderRightWidth: 1,
-        borderTopLeftRadius:5,
-        borderBottomLeftRadius: 5,
-        borderBottomRightRadius:5,
-        borderTopRightRadius: 5
+        borderTopLeftRadius:20,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius:20,
+        borderTopRightRadius: 20
       },
       optionText: {
         textAlign: 'center',
@@ -64,10 +64,10 @@ let styles = StyleSheet.create({
         borderBottomWidth:1,
         borderLeftWidth: 1,
         borderRightWidth: 1,
-        borderTopLeftRadius:5,
-        borderBottomLeftRadius: 5,
-        borderBottomRightRadius:5,
-        borderTopRightRadius: 5,
+        borderTopLeftRadius:20,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius:20,
+        borderTopRightRadius: 20,
         borderColor: 'rgba(0,0,0,0.6)'
       },
       option3: {
@@ -81,10 +81,10 @@ let styles = StyleSheet.create({
         borderBottomWidth:1,
         borderLeftWidth: 1,
         borderRightWidth: 1,
-        borderTopLeftRadius:5,
-        borderBottomLeftRadius: 5,
-        borderBottomRightRadius:5,
-        borderTopRightRadius: 5,
+        borderTopLeftRadius:20,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius:20,
+        borderTopRightRadius: 20,
         borderColor: 'rgba(0,0,0,0.6)'
       },
       option4: {
@@ -98,10 +98,10 @@ let styles = StyleSheet.create({
         borderBottomWidth:1,
         borderLeftWidth: 1,
         borderRightWidth: 1,
-        borderTopLeftRadius:5,
-        borderBottomLeftRadius: 5,
-        borderBottomRightRadius:5,
-        borderTopRightRadius: 5,
+        borderTopLeftRadius:20,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius:20,
+        borderTopRightRadius: 20,
         borderColor: 'rgba(0,0,0,0.6)'
       },
       option5: {
@@ -115,10 +115,10 @@ let styles = StyleSheet.create({
         borderBottomWidth:1,
         borderLeftWidth: 1,
         borderRightWidth: 1,
-        borderTopLeftRadius:5,
-        borderBottomLeftRadius: 5,
-        borderBottomRightRadius:5,
-        borderTopRightRadius: 5,
+        borderTopLeftRadius:20,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius:20,
+        borderTopRightRadius: 20,
         borderColor: 'rgba(0,0,0,0.6)'
       },
       button: {
@@ -131,10 +131,10 @@ let styles = StyleSheet.create({
           borderBottomWidth:2,
           borderLeftWidth: 2,
           borderRightWidth: 2,
-          borderTopLeftRadius:5,
-          borderBottomLeftRadius: 5,
-          borderBottomRightRadius:5,
-          borderTopRightRadius: 5,
+          borderTopLeftRadius:20,
+          borderBottomLeftRadius: 20,
+          borderBottomRightRadius:20,
+          borderTopRightRadius: 20,
           left: wp('26.25%')
       },
       buttonText: {

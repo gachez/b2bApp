@@ -14,5 +14,5 @@ style={{
     width: wp('100%'),
     height: 50
 }}>
-   <Image source={require('../../img/icons/menu.png')} style={{top: 20,width: 35, height: 30, left: wp('85%'), resizeMode: 'contain'}}/> 
+   <Image source={require('../../img/icons/menu.png')} style={{top: 25,width: 35, height: 25, left: wp('85%'), resizeMode: 'contain'}}/> 
         </TouchableOpacity>   )}}

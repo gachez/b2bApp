@@ -98,17 +98,17 @@ export default class EventsScreen extends Component{
                             width: wp('40%'),
                             height: 59,
                             left: wp('7.5%'),
-                            borderTopWidth: 2,
-                            borderBottomWidth:2,
-                            borderLeftWidth: 2,
-                            borderRightWidth:2,
-
+                            borderTopWidth: 1,
+                            borderBottomWidth:1,
+                            borderLeftWidth: 1,
+                            borderRightWidth:1,
+                            
                             borderTopLeftRadius:25,
                             borderBottomLeftRadius: 25,
                             borderBottomRightRadius:25,
                             borderTopRightRadius: 25,
                             borderColor: 'rgba(0,0,0,0.5)'                 
-            }}><Text style={{fontSize: 25, color: 'rgba(0, 0, 0,0.9)',fontWeight: 'bold', paddingTop: 10, paddingLeft: 25}}>Upcoming</Text>
+            }}><Text style={{fontSize: 25, color: 'rgba(0, 0, 0,0.7)',fontWeight: 'bold', paddingTop: 10, paddingLeft: 25}}>Upcoming</Text>
             </TouchableOpacity>
             <TouchableOpacity style={{
                             width: wp('40%'),
@@ -135,7 +135,7 @@ export default class EventsScreen extends Component{
                 onPress={()=>{navigate('EventScreen')}}
                 style={{
                             width: wp('95%'),
-                            height: 200,
+                            height: 250,
                             left: wp('2.5%'),
                             borderTopWidth: 1,
                             borderBottomWidth:1,
@@ -145,7 +145,7 @@ export default class EventsScreen extends Component{
                             borderBottomLeftRadius: 25,
                             borderBottomRightRadius:25,
                             borderTopRightRadius: 25,
-                            borderColor: 'rgba(0,0,0,0.5)',
+                            borderColor: 'rgba(0,0,0,0.1)',
                             flexDirection: 'row' 
                 }}>
                    <View style={{width: '70%', height: '70%'}}>
@@ -154,7 +154,8 @@ export default class EventsScreen extends Component{
                             paddingTop: 20,
                             paddingLeft:10,
                             fontSize: 20,
-                            fontWeight: 'bold'
+                            fontWeight: 'bold',
+                            color: 'rgba(0,0,0,0.7)'
                         }}>Special Agribusiness event - Come and network with vendors in the agriculture industry an...
                         </Text>
                     </View> 
@@ -166,14 +167,30 @@ export default class EventsScreen extends Component{
       
                       </View>
                       <View style={{width: '70%',
-                                    height: '30%', 
+                                    height: '15%', 
                                     position: 'absolute',
-                                    top: '70%',
+                                    top: '60%',
                                     left: 0,
                                     flexDirection: 'row'
                        }}>
                            <Image style={{width: 38, height: 38, left: 10}} source={require('../img/icons/calendar.png')}/>
-                           <Text style={{fontSize: 20.5, color: 'rgba(0,0,0,0.5)', left: '35%'}}>28 Jan 6am - 6pm</Text>
+                           <Text style={{fontSize: 20.5, color: 'rgba(0,0,0,0.5)', left: '45%'}}>28 Jan 6am - 6pm</Text>
+                      </View>
+                      {/* attending indicator */}
+                      <View style={{
+                          width: '70%',
+                          height: '15%',
+                          position: 'absolute',
+                          borderBottomLeftRadius: 25,
+                          borderTopLeftRadius: 25,
+                          top: '85%',
+                          left: 0,
+                          flexDirection: 'row',
+                          backgroundColor: 'rgba(255,195,0,0.8)'
+                      }}>
+                          
+                          <Text style={{left: '110%', fontSize: 20, fontWeight: 'bold', color: 'white', top: 3}}>312</Text>
+                          <Text style={{left: '135%', fontSize: 20, fontWeight: 'bold', color: 'white', top: 3}}>Attending</Text>
                       </View>
                 </TouchableOpacity>
              {/* end of first card */}
@@ -182,7 +199,7 @@ export default class EventsScreen extends Component{
              <TouchableOpacity  style={{
                             top: 15,
                             width: wp('95%'),
-                            height: 200,
+                            height: 250,
                             left: wp('2.5%'),
                             borderTopWidth: 1,
                             borderBottomWidth:1,
@@ -192,7 +209,7 @@ export default class EventsScreen extends Component{
                             borderBottomLeftRadius: 25,
                             borderBottomRightRadius:25,
                             borderTopRightRadius: 25,
-                            borderColor: 'rgba(0,0,0,0.5)',
+                            borderColor: 'rgba(0,0,0,0.1)',
                             flexDirection: 'row' 
                 }}>
                    <View style={{width: '70%', height: '70%'}}>
@@ -201,7 +218,8 @@ export default class EventsScreen extends Component{
                             paddingTop: 20,
                             paddingLeft:10,
                             fontSize: 20,
-                            fontWeight: 'bold'
+                            fontWeight: 'bold',
+                            color: 'rgba(0,0,0,0.7)'
                         }}>The Second annual tech event - Come and network with vendors in the ICT industry an...
                         </Text>
                     </View> 
@@ -215,19 +233,35 @@ export default class EventsScreen extends Component{
                       <View style={{width: '70%',
                                     height: '30%', 
                                     position: 'absolute',
-                                    top: '70%',
+                                    top: '60%',
                                     left: 0,
                                     flexDirection: 'row'
                        }}>
                            <Image style={{width: 38, height: 38, left: 10}} source={require('../img/icons/calendar.png')}/>
                            <Text style={{fontSize: 20.5, color: 'rgba(0,0,0,0.5)', left: '35%'}}>28 Jan 6am - 6pm</Text>
                       </View>
+                                            {/* attending indicator */}
+                                            <View style={{
+                          width: '70%',
+                          height: '15%',
+                          position: 'absolute',
+                          borderBottomLeftRadius: 25,
+                          borderTopLeftRadius: 25,
+                          top: '85%',
+                          left: 0,
+                          flexDirection: 'row',
+                          backgroundColor: 'rgba(255,195,0,0.8)'
+                      }}>
+                          
+                          <Text style={{left: '110%', fontSize: 20, fontWeight: 'bold', color: 'white', top: 3}}>120</Text>
+                          <Text style={{left: '135%', fontSize: 20, fontWeight: 'bold', color: 'white', top: 3}}>Attending</Text>
+                      </View>
                 </TouchableOpacity>
                 {/* third card */}
                 <TouchableOpacity  style={{
                             top: 30,
                             width: wp('95%'),
-                            height: 200,
+                            height: 250,
                             left: wp('2.5%'),
                             borderTopWidth: 1,
                             borderBottomWidth:1,
@@ -237,7 +271,7 @@ export default class EventsScreen extends Component{
                             borderBottomLeftRadius: 25,
                             borderBottomRightRadius:25,
                             borderTopRightRadius: 25,
-                            borderColor: 'rgba(0,0,0,0.5)',
+                            borderColor: 'rgba(0,0,0,0.1)',
                             flexDirection: 'row' 
                 }}>
                    <View style={{width: '70%', height: '70%'}}>
@@ -246,7 +280,8 @@ export default class EventsScreen extends Component{
                             paddingTop: 20,
                             paddingLeft:10,
                             fontSize: 20,
-                            fontWeight: 'bold'
+                            fontWeight: 'bold',
+                            color: 'rgba(0,0,0,0.7)'
                         }}>The African summit for event - Come and network with vendors in the ICT industry an...
                         </Text>
                     </View> 
@@ -260,12 +295,28 @@ export default class EventsScreen extends Component{
                       <View style={{width: '70%',
                                     height: '30%', 
                                     position: 'absolute',
-                                    top: '70%',
+                                    top: '60%',
                                     left: 0,
                                     flexDirection: 'row'
                        }}>
                            <Image style={{width: 38, height: 38, left: 10}} source={require('../img/icons/calendar.png')}/>
                            <Text style={{fontSize: 20.5, color: 'rgba(0,0,0,0.5)', left: '35%'}}>28 Jan 6am - 6pm</Text>
+                      </View>
+                                            {/* attending indicator */}
+                                            <View style={{
+                          width: '70%',
+                          height: '15%',
+                          position: 'absolute',
+                          borderBottomLeftRadius: 25,
+                          borderTopLeftRadius: 25,
+                          top: '85%',
+                          left: 0,
+                          flexDirection: 'row',
+                          backgroundColor: 'rgba(255,195,0,0.8)'
+                      }}>
+                          
+                          <Text style={{left: '110%', fontSize: 20, fontWeight: 'bold', color: 'white', top: 3}}>212</Text>
+                          <Text style={{left: '135%', fontSize: 20, fontWeight: 'bold', color: 'white', top: 3}}>Attending</Text>
                       </View>
                 </TouchableOpacity> 
 
